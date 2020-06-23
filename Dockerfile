@@ -14,8 +14,8 @@ ENV TERM linux
 # Airflow
 ARG AIRFLOW_VERSION=1.10.9
 ARG AIRFLOW_USER_HOME=/usr/local/airflow
-ARG AIRFLOW_DEPS=${AIRFLOW_DEPS}
-ARG PYTHON_DEPS=${PYTHON_DEPS}
+ARG AIRFLOW_DEPS="all_dbs,async,devel_hadoop,druid,hdfs,hive,jdbc,kubernetes,ldap,s3,slack,crypto,password"
+ARG PYTHON_DEPS="bcrypt boto3 SQLAlchemy==1.3.15 kubernetes"
 ENV AIRFLOW_HOME=${AIRFLOW_USER_HOME}
 
 # Define en_US.
